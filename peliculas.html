@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illusion•Películas</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <a href="index.html">
+      <img src="img/foto1.png" width="400" height="130" ,
+    /></a>
+    <header>
+      <nav id="navegador">
+        <a href="index.html">INICIO</a>
+        <a href="series.html">SERIES</a>
+        <a href="peliculas.html" class="active">PELÍCULAS</a>
+        <a href="información.html">INFO</a>
+      </nav>
+    </header>
+    <section>
+      <div class="cajaslider">
+        <img src="img/foto10.png" class="slide" />
+        <img src="img/foto2.png" class="slide" />
+        <img src="img/foto4.png" class="slide" />
+        <img src="img/foto11.png" class="slide" />
+        <img src="img/foto3.png" class="slide" />
+      </div>
+    </section>
+    <div class="tiposdecategorias">
+      <form action="/seleccion" method="post">
+        <h4>CATEGORIAS</h4>
+
+        <select id="opciones" name="opciones" required>
+          <option value="Todas">Todas</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Horror">Horror</option>
+          <option value="Aventuras">Aventuras</option>
+        </select>
+      </form>
+    </div>
+
+    <h3>PELÍCULAS</h3>
+    <section id="movies" class="popular-caja"></section>
+    <!-- <div class="popular-caja" >
+
+  <div class="Populares-1 cajatexto" >
+          <img src="img/p9.png">
+          <h5 class="titulo">Pulp Fiction</h5>
+              <p>Dos matones, Vincent y Jules visitan a un grupo de jóvenes que le deben algo a su jefe, lo que desencadena una matanza y la posterior recuperación de la deuda (un maletín cuyo contenido desconocemos). Casi son asesinados por un joven que estaba escondido, pero las balas no los tocan.</p>
+              <a href="información.html" class="boton">ver info</a>
+          </div>
+
+          <div class="Populares-2 cajatexto" >
+              <img src="img/p4.png">
+              <h5 class="titulo">Beetlejuice</h5>
+                  <p>Los fantasmas de Barbara y Adam, un matrimonio, siguen viviendo en su casa. Cuando la hermana de Barbara vende la casa a otras personas, estas hacen todo lo posible por echarlas.</p>
+                  <a href="información.html" class="boton">ver info</a>
+              </div>
+
+              <div class="Populares-3 cajatexto" >
+                  <img src="img/p8.png">
+                  <h5 class="titulo">Harry Potter y la piedra filosofal</h5>
+                      <p>Harry Potter, un huérfano de once años, descubre que es un mago y es invitado a estudiar en Hogwarts. Aunque escapa de una vida aburrida y se adentra en un mundo de magia, se encuentra con problemas que lo esperan.</p>
+                      <a href="información.html" class="boton">ver info</a>
+</div>
+</div>   -->
+    <script src="java.js"></script>
+    <footer>
+      <div class="footer-container">
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="img/fb.png" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="img/tw.png" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="img/ig.png" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="img/yt.png" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+
+      if (index >= totalSlides) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      slides.forEach((slide, i) => {
+        slide.style.display = i === currentSlide ? "block" : "none";
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);
+  </script>
+</html>

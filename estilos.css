@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "letra";
+    src: url("./font/letra1.otf");
+}
+nav a {text-align: center; font-family:"letra"; src: url(letra1.otf); color: white;font-size: 25px; margin: 20px;
+background-color: black; text-decoration: none; transition: color  0.3s,}
+
+
+nav a:hover {
+    color:#01318f;} 
+nav a .active {
+    color: #01318f !important; }
+
+    .active { color: #01318f;}
+
+
+body { background-color: black;}
+
+html, img{ text-align: center; margin: 0 auto 20px;}
+
+h1{text-align: left; font-family:"letra"; src: url(letra1.otf); color: white;font-size: 25px; margin: 20px; }
+h2{text-align: left; font-family:"letra"; src: url(letra1.otf); color: white;font-size: 25px; margin: 20px; }
+h3{text-align: left; font-family:"letra"; src: url(letra1.otf); color: white;font-size: 25px; margin: 20px; }
+h4{text-align: center; font-family:"letra"; src: url(letra1.otf); color: white;font-size: 25px; margin: 20px; }
+h5{text-align: center;font-family: 'Franklin Gothic Medium'; color: #ffffff; font-size: 20px; margin: 10px;}
+
+
+.slide{max-height: 100vh; margin: 0 auto 20px; padding: 20px;}
+
+
+
+select {
+    
+    padding: 5px;
+    margin-bottom: 20px; 
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #01318f;
+    font-size: 20px; font-family: 'Franklin Gothic Medium'; text-align: center;
+    color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    
+    background-color: #01318f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+    background-color: #000000;
+}
+
+.Populares-1 { max-height: 100vh; margin: 0 auto 20px; padding: 0 0 60px 0; text-align: center;}
+.Populares-2 { max-height: 100vh; margin: 0 auto 20px; padding: 0 0 60px 0; text-align: center;}
+.Populares-3 { max-height: 100vh; margin: 0 auto 20px; padding: 0 0 60px 0; text-align: center;}
+.popular-caja { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+
+.popular-caja .Populares-1 img {
+    width: 275px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+
+    .popular-caja .Populares-2 img {
+        width: 275px; 
+        height: auto; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+
+        .popular-caja .Populares-3 img {
+            width: 275px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+
+.cajatexto  {position:relative}
+.cajatexto h5 {position: absolute; top: 20px; left: 0; width: 100%; text-align: center; display: none;color: #ffffff;}
+.cajatexto p {position: absolute; top: 20%; left: 0; width: 100%; text-align: center; display: none
+;font-family: 'Franklin Gothic Medium';color: #ffffff; }
+.cajatexto a {position: absolute;  left: 0; display: none; font-family: 'Franklin Gothic Medium';}
+.cajatexto:hover h5 { display:block}
+.cajatexto:hover  p{ display:block}
+.cajatexto:hover a { display:block}
+.cajatexto:hover img { opacity: 0.2; transition: all 1s}
+
+h5{ width:100%;font-size: 20px; font-family: 'Franklin Gothic Medium'; text-align: center; padding: 20px; margin: 10px 0 20px; border-top: 2px solid #000; box-sizing: border-box}
+h6{ width:100%;font-size: 15px; font-family: 'Franklin Gothic ', sans-serif;text-align: justify;color: #FFF; font-weight: 300;}
+.boton {background-color:#01318f; color: #FFF; text-decoration: none; padding: 10px; margin: 10px; border-radius:20px; display: inline-block}
+
+.recuadro {
+    border: 2px solid #333; /* Borde de 2px en color gris oscuro */
+    padding: 10px; /* Espacio interno alrededor del contenido */
+    margin: 10px 0; /* Espacio externo arriba y abajo */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  color: #000;}
+
+
+
+.contenido {
+    display: flex; /* Usamos flexbox para alinear la imagen y el texto en línea */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    align-items: flex-start; /* Alinea el texto con la parte superior de la imagen */
+    padding: 10px;
+    align-items: center;
+}
+
+.imagen-lateral {
+    width: 500px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+
+    .texto-detalle {
+        font-family:'Franklin Gothic ', sans-serif; /* Aplica la fuente Roboto */
+        text-align: justify; /* Justifica todo el texto dentro del contenedor */
+        font-size: 14px; /* Ajusta el tamaño de la fuente según prefieras */
+        font-weight: 100; /* Ajusta el grosor de la fuente */
+    }
+
+    .contenido2 {
+        display: flex; /* Utiliza flexbox para organizar los elementos en una fila */
+        gap: 20px; /* Añade un espacio entre la imagen y el texto */
+        align-items: flex-start; /* Alinea los elementos al inicio de la fila */
+        padding: 10px;
+        align-items: center;
+      }
+      
+      .imagen-lateral2 {
+        order: 2; /* Coloca la imagen a la derecha */
+        width: 500px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+      
+      .texto-detalle2 {
+        order: 1; /* Coloca el texto a la izquierda */
+        /* max-width: 60%; Limita el ancho del texto */
+        font-family:'Franklin Gothic ', sans-serif; /* Aplica la fuente Roboto */
+        text-align: justify; /* Justifica todo el texto dentro del contenedor */
+        font-size: 14px; /* Ajusta el tamaño de la fuente según prefieras */
+        font-weight: 100; /* Ajusta el grosor de la fuente */
+    }
+
+
+    .links{margin: 0 40px;}
+    .social-links{display: flex;
+        
+        justify-content: center; }
+footer {background-color:#01318f; text-align: center; padding: 20px; font-size: 20px;}
+p{color: #FFF;}
+
+/* Estilos de peliculas */
+
+
+@media (max-width:768px){
+    .slide{ max-width: 100%; height: auto;  display: block; }
+html, img { max-width: 100%; height: auto;   display: block; text-align: center;}
+    .contenido {
+        flex-direction: column;
+    }
+
+    .contenido2 {
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media (max-width:480px) {
+    .slide{ max-width: 100%; height: auto;  display: block; }
+    html, img { max-width: 100%; height: auto;   display: block; text-align: center;}
+    .popular-caja {display: block;}
+    .prev { display: block;}
+    .next { display: block;}
+}

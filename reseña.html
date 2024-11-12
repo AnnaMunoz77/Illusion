@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illusion•Reseña</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+
+  <body>
+    <a href="index.html">
+    <img src="img/foto1.png" width="400" height="130" , /></a>
+    <header>
+      <nav id="navegador">
+        <a href="index.html">INICIO</a>
+        <a href="series.html">SERIES</a>
+        <a href="peliculas.html">PELÍCULAS</a>
+        <a href="información.html">INFO</a>
+      </nav>
+    </header>
+    <section>
+        <h3> </h3>
+      <h5>Gracias por enviar tu reseña. Nuestro equipo revisará el contenido para asegurarse de que cumpla con nuestros estándares. Una vez verificado, procederemos a publicarla. Agradecemos tu participación y esperamos que sigas contribuyendo con tus valiosas opiniones. </h5>
+    </section>
+    <footer>
+   
+    <div class="footer-container">
+       
+      <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank">
+              <img src="img/fb.png">
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+              <img src="img/tw.png" >
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+              <img src="img/ig.png" >
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+              <img src="img/yt.png" >
+          </a>
+      </div>
+  </div>
+  
+  </footer> 
+  </body>
+  
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+
+      if (index >= totalSlides) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      slides.forEach((slide, i) => {
+        slide.style.display = i === currentSlide ? "block" : "none";
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    setInterval(nextSlide, 3000); // Cambia automáticamente cada 3 segundos
+    showSlide(currentSlide);
+  </script>
+</html>

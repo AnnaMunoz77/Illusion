@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illusion•Series</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <a href="index.html">
+    <img src="img/foto1.png" width="400" height="130" ,></a>
+    <header>
+    
+        <nav id="navegador">
+			
+            <a href="index.html">INICIO</a>
+            <a href="series.html" class="active" >SERIES</a>
+            <a href="peliculas.html">PELÍCULAS</a>
+            <a href="información.html">INFO</a>
+            
+            </nav>
+</header>
+
+<section> 
+    <div class="cajaslider">
+        <img src="img/foto7.png" class="slide">
+        <img src="img/foto5.png" class="slide">
+        <img src="img/foto8.png" class="slide">
+        <img src="img/foto6.png" class="slide">
+        <img src="img/foto9.png" class="slide">
+    
+    
+    
+    </div>
+</section>
+    
+    
+
+<div class="tiposdecategorias">
+  <form action="/seleccion" method="post">
+    <h4>CATEGORIAS</h4>
+     
+      <select id="Opciones" name="Opciones" required>
+        <option value="Todas">Todas</option>
+          <option value="Romance">Romance</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Drama">Drama</option>
+         
+      </select>
+      
+  </form>
+</div>
+<h3>SERIES</h3>
+<section id="series" class="popular-caja"></section>
+
+        <!--div class="Populares-1 cajatexto" >
+                <img src="img/p6.png">
+                <h5 class="titulo">Breaking Bad</h5>
+                    <p>Walter White, un profesor de química, descubre que tiene cáncer y decide dedicarse al negocio de la fabricación de metanfetamina para pagar sus deudas médicas. Sus prioridades comienzan a cambiar cuando se asocia con Jesse.</p>
+                    <a href="información.html" class="boton">ver info</a>
+                </div>
+    
+                <div class="Populares-2 cajatexto" >
+                    <img src="img/p5.png">
+                    <h5 class="titulo">The Office</h5>
+                        <p>El programa documenta las hazañas de una empresa de suministro de papel en Scranton, Pensilvania. En una oficina que incluye a varios colegas, esta serie echa un vistazo a las vidas de sus compañeros de trabajo.</p>
+                        <a href="información.html" class="boton">ver info</a>
+                    </div>
+
+                    <div class="Populares-3 cajatexto" >
+                        <img src="img/p7.png">
+                        <h5 class="titulo">Euphoria</h5>
+                            <p>Un grupo de estudiantes de secundaria lucha con las drogas, el amor, las redes sociales y el dinero a medida que alcanzan la mayoría de edad mientras intentan establecer su identidad.</p>
+                            <a href="información.html" class="boton">ver info</a>
+
+                        </div>
+                        
+    </div -->
+
+    <script src="java2.js"></script>
+
+    <footer> 
+    
+      <div class="footer-container">
+       
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="img/fb.png">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="img/tw.png" >
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/ig.png" >
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="img/yt.png" >
+            </a>
+        </div>
+    </div>
+    
+    </footer> 
+    </body>
+
+
+<script>
+    let currentSlide = 0;
+     
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+     
+      if (index >= totalSlides) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else {
+        currentSlide = index;
+      }
+     
+      slides.forEach((slide, i) => {
+        slide.style.display = i === currentSlide ? 'block' : 'none';
+      });
+    }
+     
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+     
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);  
+    </script>	
+</html>
